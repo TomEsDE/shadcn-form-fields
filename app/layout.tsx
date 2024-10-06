@@ -16,6 +16,18 @@ export const metadata: Metadata = {
   title: 'shadcn form field wrapper',
   description:
     'Improve your development with compact, feature rich form field components for shadcn',
+  openGraph: {
+    title: 'shadcn form field wrapper',
+    description:
+      'Improve your development with compact, feature rich form field components for shadcn',
+    type: 'website',
+    url: 'https://shadcn-form-fields.vercel.app',
+  },
+  twitter: {
+    title: 'shadcn form field wrapper',
+    description:
+      'Improve your development with compact, feature rich form field components for shadcn',
+  },
 };
 
 export default function RootLayout({

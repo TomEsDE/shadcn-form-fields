@@ -1,12 +1,13 @@
 # Wrapper components for shadcn form fields
 
-This page showcases some of the wrapper components I built for shadcn form fields, like input, select & combobox to reduce boilerplate code.
+This page showcases some of the wrapper components I built for shadcn form fields,
+like input, select & combobox to reduce boilerplate code.
 
-The page is deployed here and has a playground with the options the components offer:
+The page has a playground section with the options the components offer and is [`deployed here`](https://shadcn-form-fields.vercel.app)
 
 The form fields accept any zod schema and are fully typesafe.
 
-This page is part of my learning experience with next-js :)
+This page & the components are part of my learning experience with next-js :)
 
 The wrapper components are included in this repository, so check it out, if interested.
 
