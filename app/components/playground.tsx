@@ -32,8 +32,8 @@ export default function Playground() {
         <PlaygroundSelect />
       </div>
       <Separator className="w-10/12 mx-auto h-0.5 bg-primary/50" />
-      <div className="flex flex-col gap-4 text-center text-primary text-2xl">
-        more wrapper components about to come like
+      <div className="flex flex-col gap-4 text-center text-primary text-2xl [text-wrap:balance]">
+        more wrapper components to come like
         <strong>{'<ToggleGroupWrapper>'}</strong>
         stay tuned
       </div>

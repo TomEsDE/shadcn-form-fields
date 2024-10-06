@@ -69,7 +69,7 @@ export default function PlaygroundCombobox() {
   const [attrKey, setAttrKey] = useState<TAttrKey>('countryA');
   const [listVariant, setListVariant] = useState<TListVariant>('countries');
   const [label, setLabel] = useState('Select Country');
-  const [labelPosition, setLabelPosition] = useState<TLabelVariant>('top');
+  const [labelPosition, setLabelPosition] = useState<TLabelVariant>('inside');
   const [searchPlaceholder, setSearchPlaceholder] =
     useState('Search country...');
   const [emptyResultText, setEmptyResultText] = useState('No country found.');
