@@ -58,7 +58,7 @@ function FormSelectField<T extends FieldValues>({
         <Select
           onValueChange={(value) => {
             field.onChange(value);
-            onChange && onChange(value);
+            if (onChange) onChange(value);
           }}
           value={field.value}
           defaultValue={undefined}
