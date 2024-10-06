@@ -14,7 +14,7 @@ export default function Header() {
               Playground
             </Link>
             <Link
-              href="https://github.com/TomEsDe"
+              href="https://github.com/TomEsDe/shadcn-form-fields"
               target="_blank"
               className="hover:text-primary"
             >
