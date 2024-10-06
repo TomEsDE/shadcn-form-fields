@@ -22,7 +22,7 @@ export default function Header() {
             </Link>
           </div>
           <Link
-            href="https://github.com/TomEsDe"
+            href="https://github.com/TomEsDE/shadcn-form-fields"
             target="_blank"
             className="hover:text-primary sm:hidden"
           >

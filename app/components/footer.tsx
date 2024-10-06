@@ -15,7 +15,7 @@ export default function Footer() {
             <FaLinkedin className="h-5 w-5 text-primary" />
           </Link>
           <Link
-            href="https://github.com/TomEsDe"
+            href="https://github.com/TomEsDE/shadcn-form-fields"
             target="_blank"
             className="hover:text-primary"
           >

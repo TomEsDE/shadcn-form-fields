@@ -1,6 +1,18 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Wrapper components for shadcn form fields
+
+This page showcases some of the wrapper components I built for shadcn form fields, like input, select & combobox to reduce boilerplate code.
+
+The page is deployed here and has a playground with the options the components offer:
+
+The form fields accept any zod schema and are fully typesafe.
+
+This page is part of my learning experience with next-js :)
+
+The wrapper components are included in this repository, so check it out, if interested.
 
 ## Getting Started
+
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 First, run the development server:
 
