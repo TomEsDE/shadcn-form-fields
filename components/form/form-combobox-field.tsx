@@ -124,11 +124,7 @@ function FormComboboxField<T extends FieldValues, P extends TListItemBase<T>>({
           </PopoverTrigger>
           {/* relative content-width-fix from here https://github.com/shadcn-ui/ui/issues/1690 */}
           <PopoverContent className="p-0 w-[--radix-popover-trigger-width] max-h-[--radix-popover-content-available-height]">
-            <Command
-            // onChange={(evt: ChangeEvent<HTMLInputElement>) =>
-            //   console.log('evt.val', evt.target.value)
-            // }
-            >
+            <Command>
               <CommandInput placeholder={searchPlaceholder} />
               <CommandList>
                 <CommandEmpty>{emptyResultText}</CommandEmpty>
@@ -153,7 +149,6 @@ function FormComboboxField<T extends FieldValues, P extends TListItemBase<T>>({
                     </CommandItem>
                   ))}
                 </CommandGroup>
-                {/* <CommandGroup>{children}</CommandGroup> */}
               </CommandList>
             </Command>
           </PopoverContent>

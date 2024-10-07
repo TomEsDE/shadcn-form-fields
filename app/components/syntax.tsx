@@ -1,9 +1,6 @@
 import { ClockArrowDown } from 'lucide-react';
-// import { PrismLight  as SyntaxHighlighter } from 'react-syntax-highlighter';
-
 import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { oneDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
-
 import tsx from 'react-syntax-highlighter/dist/cjs/languages/prism/tsx';
 import HeroExamples from './hero-examples';
 SyntaxHighlighter.registerLanguage('tsx', tsx);
@@ -32,15 +29,9 @@ export default function Syntax() {
         <div className="w-10/12 self-center hidden md:block">
           <HeroExamples showCombo={false} title="Result" />
         </div>
-        {/* <Link href="#playground" className="h-full flex items-end md:pb-8">
-          <Button type="button" className="w-fit flex gap-4">
-            {'Playground'} <Play className="h-4 w-4" />
-          </Button>
-        </Link> */}
       </div>
       <div className="md:w-1/2 flex justify-center items-center lg:items-end">
         <div className="border rounded-lg py-4 bg-[rgb(40,44,52)]/[1] 11/12 h-fit max-w-md">
-          {/* <MarkdownRender mdString={codeStringJS + codeStringHtml} /> */}
           <SyntaxHighlighter
             showLineNumbers={true}
             useInlineStyles={true}
@@ -51,7 +42,6 @@ export default function Syntax() {
               padding: '0 8px 0 8px',
               margin: '0px',
               maxWidth: '80cqw',
-              // background: 'black',
             }}
           >
             {codeString}

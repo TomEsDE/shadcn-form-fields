@@ -141,8 +141,6 @@ export default function PlaygroundSelect() {
   const handleOnReset = async (value: string = '') => {
     form.reset({ [attrKey]: value });
     setDescription('');
-    // todo test
-    createComponentCodeFromAttributes();
   };
 
   const createComponentCodeFromAttributes = () => {
@@ -189,8 +187,6 @@ export default function PlaygroundSelect() {
       </SelectItem>
     ))}`);
     codeString.push(`\n</FormSelectField>`);
-
-    // setCodeString(codeString.join(''));
 
     return codeString.join('');
   };

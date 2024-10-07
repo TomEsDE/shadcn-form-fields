@@ -40,7 +40,6 @@ interface TFormFieldWrapper<T extends FieldValues> extends TFormFieldBaseProps {
   name: FieldPath<T>;
   control: Control<T>;
   errors: FieldErrors<T>;
-  // label: { text: string; variant: TFormFieldLabelVariant };
   children: ({
     field,
   }: {

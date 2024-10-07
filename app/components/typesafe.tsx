@@ -4,13 +4,10 @@ import Image from 'next/image';
 export default function Typesafe() {
   return (
     <div className="max-w-6xl mx-auto flex flex-col gap-4">
-      {/* <div className="[text-wrap:balance] text-[clamp(2rem,12cqw,2.5rem)]/[1.125] text-primary font-bold text-center">
-        Features
-      </div> */}
       <div className="flex flex-col md:flex-row gap-4 md:gap-10">
         <div className="md:w-3/5 flex justify-center order-2 md:order-1 lg:px-12 xl:px-24">
           <Image
-            src="https://tomesde-pub.s3.eu-central-1.amazonaws.com/nextjs-form-fields/typesafe.png"
+            src={'/typesafe.png'}
             alt="typesafe"
             width={0}
             height={0}

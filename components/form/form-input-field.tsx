@@ -28,10 +28,6 @@ function FormInputField<T extends FieldValues>({
   iconPlacement,
   iconBorderStyle,
 }: TFormInputField<T>) {
-  // const labelObj =
-  //   typeof label === 'string'
-  //     ? { text: label, variant: 'top' as TFormFieldLabelVariant }
-  //     : label;
   return (
     <FormFieldWrapper
       name={name}

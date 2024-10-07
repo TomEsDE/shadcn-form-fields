@@ -11,6 +11,13 @@ import { Flag, KeyRound, User } from 'lucide-react';
 import { useForm } from 'react-hook-form';
 import { resetValues, Schema, SchemaType } from './utils';
 
+const list = COUNTRIES.sort((a, b) =>
+  a.nativeName.localeCompare(b.nativeName)
+).map((c) => ({
+  id: c.code,
+  value: c.nativeName,
+}));
+
 export default function HeroExamples({
   title = 'Examples',
   showCombo = true,
@@ -93,21 +100,9 @@ export default function HeroExamples({
               <FormComboboxField
                 name="country"
                 form={form}
-                // getButtonText={(fieldValue) => {
-                //   return fieldValue
-                //     ? users.find((user) => user._id === fieldValue)?.username
-                //     : userMStore.selectedUser
-                //     ? userMStore.selectedUser.username
-                //     : 'Select user...';
-                // }}
                 searchPlaceholder="Search country..."
                 emptyResultText="No country found."
-                list={COUNTRIES.sort((a, b) =>
-                  a.nativeName.localeCompare(b.nativeName)
-                ).map((c) => ({
-                  id: c.code,
-                  value: c.nativeName,
-                }))}
+                list={list}
                 onChange={(fieldValue) => {
                   console.log('selected country-code', fieldValue);
                 }}

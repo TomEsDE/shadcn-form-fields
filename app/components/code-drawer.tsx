@@ -77,7 +77,6 @@ export default function CodeDrawer({
               fontSize: '9pt',
               padding: '0px',
               margin: '0px',
-              // background: 'black',
             }}
           >
             {codeString}

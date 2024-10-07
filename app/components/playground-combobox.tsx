@@ -195,8 +195,6 @@ export default function PlaygroundCombobox() {
 
     codeString.push(`/>`);
 
-    // setCodeString(codeString.join(''));
-
     return codeString.join('\n');
   };
 
