@@ -5,6 +5,9 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
+export const sleep = (ms: number) =>
+  new Promise((resolve) => setTimeout(resolve, ms));
+
 export const USER_ROLES = ['user', 'admin', 'guest', 'staff'] as const;
 export const MONTH_NAMES = [
   'January',

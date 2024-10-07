@@ -10,6 +10,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { Flag, KeyRound, User } from 'lucide-react';
 import { useForm } from 'react-hook-form';
 import { resetValues, Schema, SchemaType } from './utils';
+import { RefObject, useEffect, useState } from 'react';
 
 const list = COUNTRIES.sort((a, b) =>
   a.nativeName.localeCompare(b.nativeName)
@@ -42,6 +43,16 @@ export default function HeroExamples({
     formState,
     formState: { isSubmitting },
   } = form;
+
+  const [inputRef, setInputRef] = useState<RefObject<HTMLInputElement> | null>(
+    null
+  );
+
+  useEffect(() => {
+    if (inputRef) {
+      inputRef.current?.focus();
+    }
+  }, [inputRef]);
 
   const onSubmit = async (formdata: SchemaType) => {
     console.log(formdata);
@@ -83,7 +94,8 @@ export default function HeroExamples({
                 icon={<User height={16} width={16} />}
                 iconBorderStyle="dashed"
                 className="dark:bg-secondary/30"
-                classNameLabel="text-base -translate-y-[18px] "
+                classNameLabel="text-base -translate-y-[18px] peer-focus:-translate-y-[18px]"
+                setInputRef={setInputRef}
               />
               <FormInputField
                 type="password"

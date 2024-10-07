@@ -1,15 +1,17 @@
-import { Input } from '@/components/ui/input';
+import { Input, InputProps } from '@/components/ui/input';
 import { cn } from '@/lib/utils';
 import { Control, FieldPath, FieldValues, FormState } from 'react-hook-form';
 import FormFieldWrapper, { TFormFieldBaseProps } from './form-field-wrapper';
+import { RefObject, useEffect, useRef } from 'react';
 
-interface TFormInputField<T extends FieldValues> extends TFormFieldBaseProps {
-  type?: 'text' | 'password' | 'number';
+interface TFormInputField<T extends FieldValues>
+  extends TFormFieldBaseProps,
+    InputProps {
+  // type?: 'text' | 'password' | 'number';
   name: FieldPath<T>;
   control: Control<T>;
   formState: FormState<T>;
-  placeholder?: string;
-  className?: string;
+  setInputRef?: (inputRef: RefObject<HTMLInputElement>) => void;
 }
 
 function FormInputField<T extends FieldValues>({
@@ -27,7 +29,15 @@ function FormInputField<T extends FieldValues>({
   icon,
   iconPlacement,
   iconBorderStyle,
+  setInputRef,
+  ...inputProps
 }: TFormInputField<T>) {
+  const _inputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    if (setInputRef) setInputRef(_inputRef);
+  }, [_inputRef]);
+
   return (
     <FormFieldWrapper
       name={name}
@@ -58,7 +68,21 @@ function FormInputField<T extends FieldValues>({
               ? placeholder
               : ' '
           }
-          disabled={isSubmitting}
+          disabled={field.disabled || isSubmitting}
+          {...inputProps}
+          // to get access to ref, see here: https://www.react-hook-form.com/faqs/#Howtosharerefusage
+          ref={(e) => {
+            field.ref(e);
+            // @ts-expect-error no other way, solution provided by react-hook-form - it works
+            _inputRef.current = e;
+          }}
+          // in case you want extra access to the onChange-event
+          onChange={(e) => {
+            field.onChange(e);
+            if (inputProps.onChange) {
+              inputProps.onChange(e);
+            }
+          }}
         />
       )}
     </FormFieldWrapper>

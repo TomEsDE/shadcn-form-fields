@@ -62,7 +62,7 @@ function FormSelectField<T extends FieldValues>({
           }}
           value={field.value}
           defaultValue={undefined}
-          disabled={isSubmitting}
+          disabled={field.disabled || isSubmitting}
         >
           <SelectTrigger
             className={cn(

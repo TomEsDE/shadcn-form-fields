@@ -97,7 +97,7 @@ function FormComboboxField<T extends FieldValues, P extends TListItemBase<T>>({
               role="combobox"
               aria-expanded={open}
               className={cn('w-full flex justify-between h-auto', className)}
-              disabled={isSubmitting}
+              disabled={field.disabled || isSubmitting}
             >
               <div className=" flex flex-col items-start">
                 {labelVariant === 'inside' && (
