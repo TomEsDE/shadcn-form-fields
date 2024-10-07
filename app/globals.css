@@ -65,3 +65,10 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+.bg-image {
+  background-image: url('/bg-svg-subtle-prism-green.svg');
+  /* background-image: url('/bg-svg-sun-tornado.svg'); */
+  background-size: cover;
+  background: cover;
+}
