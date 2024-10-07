@@ -16,5 +16,4 @@ export const resetValues: SchemaType = {
   username: '',
   password: '',
   country: '',
-  // age: 14,
 };

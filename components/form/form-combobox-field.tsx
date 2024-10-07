@@ -115,7 +115,6 @@ function FormComboboxField<T extends FieldValues, P extends TListItemBase<T>>({
                     ? getButtonText(field.value)
                     : list.find((item) => item.id === field.value)?.value ??
                       label}
-                  {/* `Select ${name}...`} */}
                 </span>
               </div>
 

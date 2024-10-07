@@ -77,7 +77,6 @@ function FormSelectField<T extends FieldValues>({
               {labelVariant === 'inside' && (
                 <span className="font-semibold uppercase text-[0.70rem] text-primary">
                   {label}
-                  {/* {name} */}
                 </span>
               )}
               <SelectValue placeholder={selectPlaceholder} />

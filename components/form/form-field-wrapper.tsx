@@ -24,7 +24,6 @@ export type TFormFieldLabelVariant =
   | 'none';
 
 export interface TFormFieldBaseProps {
-  // label: { text: string; variant: TFormFieldLabelVariant };
   label?: string;
   labelVariant?: TFormFieldLabelVariant;
   classNameLabel?: string;
