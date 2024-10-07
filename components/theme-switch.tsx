@@ -10,6 +10,11 @@ export function ThemeSwitchV2() {
   // useEffect only runs on the client, so now we can safely show the UI
   useEffect(() => {
     setMounted(true);
+
+    if (!theme || theme === 'system') {
+      const mq = window.matchMedia('(prefers-color-scheme: dark)');
+      setTheme(mq.matches ? 'dark' : 'light');
+    }
   }, []);
 
   if (!mounted) {
