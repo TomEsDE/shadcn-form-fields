@@ -65,7 +65,7 @@ export default function PlaygroundSelect() {
   const [attrKey, setAttrKey] = useState<TAttrKey>('roleB');
   const [listVariant, setListVariant] = useState<TListVariant>('roles');
   const [label, setLabel] = useState('Select Role');
-  const [labelPosition, setLabelPosition] = useState<TLabelVariant>('top');
+  const [labelPosition, setLabelPosition] = useState<TLabelVariant>('border');
   const [selectPlaceholder, setSelectPlaceholder] = useState('Select role...');
   const [description, setDescription] = useState('');
   const [iconPosition, setIconPosition] = useState<TIconPosition>('right');
@@ -106,8 +106,8 @@ export default function PlaygroundSelect() {
     setLabelPosition(value ? value : 'none');
   };
   const handleOnToggleIconPos = async (value: TIconPosition) => {
-    setIconPosition(value ? value : 'none');
-    if (value === 'none') setIcon(undefined);
+    setIconPosition(!value || value ? value : 'none');
+    if (!value || value === 'none') setIcon(undefined);
     else {
       setIcon(<Route height={16} width={16} />);
     }

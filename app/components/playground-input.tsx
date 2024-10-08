@@ -86,7 +86,7 @@ export default function PlaygroundInput() {
   };
   const handleOnToggleIconPos = async (value: TIconPosition) => {
     setIconPosition(value ? value : 'none');
-    if (value === 'none') setIcon(undefined);
+    if (!value || value === 'none') setIcon(undefined);
     else {
       setIcon(<User height={16} width={16} />);
     }

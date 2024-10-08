@@ -74,8 +74,8 @@ export default function PlaygroundCombobox() {
     useState('Search country...');
   const [emptyResultText, setEmptyResultText] = useState('No country found.');
   const [description, setDescription] = useState('');
-  const [iconPosition, setIconPosition] = useState<TIconPosition>('right');
-  const [iconBorder, setIconBorder] = useState<TIconBorder>('dashed');
+  const [iconPosition, setIconPosition] = useState<TIconPosition>('left');
+  const [iconBorder, setIconBorder] = useState<TIconBorder>('line');
   const [icon, setIcon] = useState<React.ReactNode | undefined>(
     <Flag height={16} width={16} />
   );
@@ -109,7 +109,7 @@ export default function PlaygroundCombobox() {
   };
   const handleOnToggleIconPos = async (value: TIconPosition) => {
     setIconPosition(value ? value : 'none');
-    if (value === 'none') setIcon(undefined);
+    if (!value || value === 'none') setIcon(undefined);
     else {
       setIcon(<Flag height={16} width={16} />);
     }
